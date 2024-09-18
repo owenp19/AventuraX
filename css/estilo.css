@@ -1,0 +1,935 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Cambay', sans-serif;
+    font-family: 'Lobster', sans-serif;
+    font-family: 'Pridi', serif;
+}
+:root {
+    --color-texto: #fff;
+    --color-fondo: #000;
+    --color-principal: #20BDFF;
+
+    --h1-fuente: 6rem;
+    --h2-fuente: 3rem;
+    --p-fuente: 1rem;
+}
+body {
+    color: var(--color-texto);
+    background: var(--color-fondo);
+}
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Aqui inicia el codigo CSS de la sesión de barra de navegacion*/
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background: transparent;
+    padding: 27px 17%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .50s ease;
+}
+.logo {
+    font-size: 33px;
+    color: var(--color-texto);
+    font-family: 'Lobster', sans-serif;
+    font-weight: 700;
+}
+span {
+    color: var(--color-principal);
+    font-family: 'Lobster', sans-serif;
+}
+.barra-nav {
+    display: flex;
+}
+.barra-nav a {
+    color: var(--color-texto);
+    font-size: var(--p-fuente);
+    font-family: 'Pridi', serif;
+    font-weight: 400;
+    margin: 15px 22px;
+    transition: all .50s ease;
+}
+.barra-nav a:hover {
+    color: var(--color-principal);
+}
+.h-derecha {
+    display: flex;
+    align-items: center;
+}
+.h-derecha a:first-child {
+    color: var(--color-texto);
+    font-size: var(--p-fuente);
+    margin-right: 20px;
+}
+.h-derecha a {
+    vertical-align: middle;
+    font-size: 20px;
+    color: var(--color-texto);
+    margin-right: 18px;
+    margin-left: 5px;
+    transition: all .50s ease;
+}
+.h-derecha a:hover {
+    color: var(--color-principal);
+    transform: translateY(-3px);
+}
+#icon-menu {
+    color: var(--color-texto);
+    font-size: 31px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+/* Aqui inicia el codigo CSS de la sesión inicio*/
+section {
+    padding: 70px 17% 60px;
+}
+.inicio {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to left, rgba(0,0,0,0.6),rgba(0,0,0,0.3));
+    background-size: cover;
+    background-position: bottom center;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.inicio-texto h5 {
+    font-family: 'Cambay', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 23px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: var(--color-principal);
+}
+.inicio-texto h1 {
+    font-family: 'Lobster', sans-serif;
+    font-size: var(--h1-fuente);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 17px;
+}
+.inicio-texto p {
+    font-family: 'Pridi', serif;
+    font-size: var(--p-fuente);
+    font-weight: 400;
+    line-height: 31px;
+    color: #ffffffab;
+    margin-bottom: 15px;
+}
+.btn {
+    display: inline-block;
+    padding: 13px 40px;
+    background: linear-gradient(to right, #5433FF, #20BDFF);
+    color: var(--color-texto);
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all .50s ease;
+    cursor: pointer;
+    z-index: 1000;
+}
+.btn:hover{
+    transform: translateX(10px);
+    border: 1px solid var(--color-principal);
+    background: transparent;
+    color: var(--color-texto);
+}
+.bg-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+@media(min-aspect-ratio:16/9) {
+    .bg-video {
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio:16/9) {
+    .bg-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+/* Nueva forma divisora en la parte inferior de la sección */
+.forma-divisora-inferior {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg); /* Mantiene la forma invertida */
+}
+.forma-divisora-inferior svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 85px; /* Ajuste de altura según lo solicitado */
+}
+.forma-divisora-inferior .shape-fill {
+    fill: var(--color-fondo);
+}
+
+
+/* Aqui inicia el codigo CSS de la sesión  del chatbot */
+.contenedor-chatbot {
+    position: relative;
+}
+.boton-chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(to right, #5433FF, #20BDFF);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    animation: pulso 2s infinite;
+}
+.icono-mensaje {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 18px;
+    color: var(--color-principal); 
+    background: var(--color-texto);
+    border-radius: 50%;
+    padding: 3px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Animación de palpitación */
+@keyframes pulso {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+}
+.boton-chatbot img {
+    width: 45px;
+    height: 45px;
+}
+.ventana-chat {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 320px;
+    background: var(--color-texto);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    z-index: 99;
+}
+.cabecera-chat {
+    background: var(--color-principal);
+    color: var(--color-texto);
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cabecera-chat h3 {
+    font-family: 'Cambay', sans-serif;
+    font-size: 17px;
+    margin: 0;
+}
+.cerrar-btn {
+    background: none;
+    border: none;
+    color: var(--color-texto);
+    font-size: 27px;
+    cursor: pointer;
+}
+.cuerpo-chat {
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    font-family: 'Pridi', serif;
+    font-size: 15px;
+}
+.pie-chat {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.pie-chat input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.pie-chat .enviar-btn {
+    background: linear-gradient(to right, #5433FF, #20BDFF);
+    color: var(--color-texto);
+    font-family: 'Pridi', serif;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+    .ventana-chat {
+        width: 90%;
+        bottom: 70px;
+        right: 5%;
+    }
+    .boton-chatbot {
+        bottom: 120px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+    }
+    .imagen-chatbot {
+        width: 25px; 
+        height: 25px;
+        bottom: -8px;
+        right: -8px;
+    }
+    .icono-mensaje {
+        font-size: 16px;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+/* Aqui inicia el codigo CSS de la sesión de servicios*/
+header.sticky {
+    padding: 8px 17%;
+    background: transparent;
+    backdrop-filter: blur(35px);
+}
+.caracter-contenido {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+}
+.fila-img {
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 21px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.fila-img img {
+    width: 100%;
+    display: block;
+    transition: transform 0.7s;
+}
+.fila-img img:hover {
+    transform: scale(1.2);
+}
+.caracter-contenido h4 {
+    font-family: 'Cambay', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .50s ease;
+}
+.caracter-contenido h4:hover {
+    color: var(--color-principal);
+}
+
+/* Aqui inicia el codigo CSS de la sesión de vacaciones*/
+.vacaciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 9rem;
+}
+.vacaciones-img {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    border-radius: 11px;
+}
+.carrusel {
+    display: flex;
+    transition: transform 1s ease-in-out; 
+}
+.carrusel img {
+    width: 100%;
+    height: 60%;
+    border-radius: 11px;
+}
+.vacaciones-texto h5 {
+    font-family: 'Cambay', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--color-principal);
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    margin-bottom: 21px;
+}
+.vacaciones-texto h2 {
+    font-family: 'Lobster', sans-serif;
+    font-size: var(--h2-fuente);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+.vacaciones-texto p {
+    font-family: 'Pridi', serif;
+    font-size: var(--p-fuente);
+    font-weight: 500;
+    line-height: 31px;
+    color: #ffffffab;
+    margin-bottom: 35px;
+}
+/* responsividad para móviles */
+@media (max-width: 768px) {
+    .vacaciones {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .vacaciones-img {
+        width: 100%;
+    }
+}
+
+/* Aqui inicia el codigo CSS de la sesión de experiencias*/
+.centro-texto h2 {
+    font-family: 'Lobster', sans-serif;
+    font-size: var(--h2-fuente);
+    font-weight: 800;
+    text-align: center;
+}
+.destino-contenido {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+.caja {
+    position: relative;
+}
+.caja img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 11px;
+    filter: brightness(70%);
+    transition: all .3s cubic-bezier(.499,.05.55,.95);
+    will-change: filter;
+    display: block;
+}
+.caja h6 {
+    position: absolute;
+    left: 25px;
+    bottom: 95px;
+    font-family: 'Pridi', serif;
+    font-size: 19px;
+    font-weight: 500;
+}
+.caja h4 {
+    position: absolute;
+    left: 25px;
+    bottom: 65px;
+    font-family: 'Lobster', sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+}
+.caja img:hover {
+    filter: brightness(90%) hue-rotate(50deg);
+    transform: scale(1.04);
+    cursor: pointer;
+}
+/* estilo para el rating con estrellas */
+.rating {
+    position: absolute;
+    left: 25px;
+    bottom: 35px;
+    color: #FFD700; 
+}
+.rating i {
+    font-size: 18px;
+    margin-right: 2px;
+}
+/* estilo del ícono de corazón */
+.icono-corazon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.icono-corazon i {
+    font-size: 24px;
+    color: #ffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+/* estilo para cuando el corazón es clicado */
+.icono-corazon i.active {
+    color: red;
+}
+/* estilo de boton centrado mas experiencias */
+.centro-btn {
+    text-align: center;
+    margin-top: 4rem;
+
+}
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .destino-contenido {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Aqui inicia el codigo CSS de la sesión de quienes somos */
+.nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: center;
+    gap: 9rem;
+}
+.nosotros-img {
+    position: relative;
+    overflow: hidden;
+    width: 90%; 
+    border-radius: 11px;
+}
+.carrusel-dos img {
+    width: 100%;
+    height: 60%;
+    border-radius: 11px;
+}
+.carrusel-dos {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+.nosotros-texto h5 {
+    font-family: 'Cambay', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--color-principal);
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    margin-bottom: 21px;
+}
+.nosotros-texto h2 {
+    font-family: 'Lobster', sans-serif;
+    font-size: var(--h2-fuente);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+.nosotros-texto p {
+    font-family: 'Pridi', serif;
+    font-size: var(--p-fuente);
+    font-weight: 500;
+    line-height: 31px;
+    color: #ffffffab;
+    margin-bottom: 35px;
+}
+/* responsividad para móviles */
+@media (max-width: 768px) {
+    .nosotros {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .nosotros-img {
+        width: 100%;
+    }
+}
+
+/*  Aqui inicia el codigo CSS de la sesión del formulario aventuraX */
+.aventurax-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px; 
+}
+.contacto-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 100px; 
+}
+.contacto-informacion,
+.mapa {
+    flex: 1; 
+    min-width: 300px; 
+    display: flex;
+    flex-direction: column; 
+}
+.mapa iframe {
+    width: 100%; 
+    height: 100%; 
+    border: 0;
+}
+.contacto-titulo {
+    font-family: 'Lobster', sans-serif;
+    font-size: 2.7rem;
+    margin-bottom: 21px;
+    color: #fff;
+}
+.ayuda {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.ayuda-imagen {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
+.ayuda-detalles p {
+    font-family: 'Pridi', serif;
+    font-size: var(--p-fuente);
+    font-weight: 500;
+    color: #ffffffab;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.formulario label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: 'Pridi', serif;
+    font-size: 13px;
+    margin-bottom: 20px;
+    background-color: #222;
+    color: #f5f5f5;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+    color: #888;
+}
+.formulario input:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: var(--color-principal);
+}
+/* estilos responsivos para móviles */
+@media (max-width: 768px) {
+    .aventurax-form {
+        padding: 20px; 
+    }
+    .contacto-contenedor {
+        padding: 0 20px; 
+        flex-direction: column; 
+    }
+    .contacto-informacion,
+    .mapa {
+        flex: none;
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+    .contacto-titulo {
+        font-size: 2rem; 
+        text-align: center; 
+    }
+    .ayuda-detalles p {
+        font-size: 0.9rem; 
+    }
+    .formulario input,
+    .formulario textarea {
+        font-size: 0.9rem; 
+    }
+    .formulario label {
+        font-size: 0.9rem; 
+    }
+    .formulario button {
+        width: 100%; 
+        font-size: 0.9rem; 
+    }
+}
+@media (max-width: 480px) {
+    .aventurax-form {
+        padding: 10px; 
+    }
+    .contacto-titulo {
+        font-size: 1.8rem; 
+    }
+    .ayuda {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+    .ayuda-imagen {
+        width: 40px; 
+        height: 40px;
+        margin-bottom: 10px; 
+    }
+    .formulario input,
+    .formulario textarea {
+        font-size: 0.85rem; 
+    }
+    .formulario label {
+        font-size: 0.85rem; 
+    }
+    .formulario button {
+        width: 100%;
+        font-size: 0.85rem; 
+        padding: 8px; 
+    }
+    .mapa iframe {
+        height: 300px; 
+    }
+}
+
+/* Estilo de las olas en la parte superior del pie de página */
+.custom-shape-divider-top-1726533774 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.custom-shape-divider-top-1726533774 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 123px;
+}
+.custom-shape-divider-top-1726533774 .shape-fill {
+    fill: var(--color-fondo);
+}
+/* Estilo de la sección de pie de página */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 2rem;
+    margin-top: 100px;
+    background: linear-gradient(to right, #5433FF, #20BDFF);
+    position: relative;
+    padding-top: 120px; /* Espacio para las olas */
+}
+.footer-caja {
+    display: flex;
+    flex-direction: column;
+}
+.footer-caja h3 {
+    font-family: 'Cambay', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+.footer-caja a {
+    color: var(--color-texto);
+    margin-bottom: 0.8rem;
+    transition: all 0.50s ease;
+}
+.footer-caja a:hover {
+    transform: translateX(-5px);
+    color: #202020;
+}
+.red-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    background: #202020;
+    color: var(--color-texto);
+    font-size: 21px;
+    border-radius: 50%;
+    margin-right: 9px;
+    transition: transform 0.6s;
+}
+.red-social a:hover {
+    color: var(--color-texto);
+    transform: translateX(-4px);
+}
+/* Estilo para la sección de derechos de autor */
+.copyrigth p {
+    text-align: center;
+    padding: 20px;
+    color: var(--color-texto);
+    background: linear-gradient(to right, #5433FF, #20BDFF);
+    font-family: 'Cambay', sans-serif;
+    font-size: 17px;
+}
+.desarrollador {
+    color: #202020;
+    font-weight: 700;
+    cursor: pointer;
+}
+/* Aqui inicia el codigo CSS de la sesión de derecho de autor*/
+.copyrigth p {
+    text-align: center;
+    padding: 20px;
+    color: var(--color-texto);
+    background: linear-gradient(to right, #5433FF, #20BDFF);
+    font-family: 'Cambay', sans-serif;
+    font-size: 17px;
+}
+.desarrollador {
+    color: #202020;
+    font-weight: 700;
+    cursor: pointer;
+}
+/* estilos diseño Responsivo varias secciones */
+@media (max-width: 1700px) {
+    header {
+        padding: 18px 8%;
+        }
+    header.sticky {
+        padding: 7px 8%;
+    }
+    section {
+        padding: 50px 8% 40px;
+    }
+}
+@media (max-width: 1200px) {
+    header {
+        padding: 14px 5%;
+        }
+    header.sticky {
+        padding: 7px 5%;
+    }
+    section {
+        padding: 45px 5% 35px;
+    }
+    :root {
+        --h1-fuente: 4.6rem;
+        --h2-fuente: 2.8rem;
+        --p-fuente: 15px;
+    }
+    .inicio {
+        height: 90vh;
+    }
+}
+@media (max-width: 1050px) {
+    .caracter-contenido {
+        gap: 1.5rem;
+    }
+    .vacaciones {
+        gap: 3rem;
+    }
+    .nosotros {
+        gap: 3rem;
+    }
+    #icon-menu {
+        display: block;
+    }
+    .barra-nav {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        padding: 40px 60px;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--color-fondo);
+        transition: all .50s ease;
+    }
+    .barra-nav a {
+        display: block;
+        color: #979797;
+        padding: 0;
+        margin: 0px 0px 40px 0px;
+        font-size: 2.2rem;
+        font-weight: 400;
+    }
+    .barra-nav.open {
+        left: 0;
+    }
+}
+@media (max-width: 800px) {
+    .vacaciones {
+        grid-template-columns: 1fr;
+    }
+    .destino-contenido {
+        grid-template-columns: 1fr;
+    }
+    .nosotros {
+        grid-template-columns: 1fr; 
+    }
+}
+@media (max-width: 600px) {
+    :root {
+        --h1-fuente: 3rem;
+        --h2-fuente: 2rem;
+    }
+    .inicio {
+        height: 85vh;
+    }
+    .inicio-texto h5 {
+        font-size: 15px;
+    }
+    .h-derecha a {
+        display: none;
+    }
+}
+@media (max-width: 400px) {
+    html, 
+    body {
+        width: 100%;
+        overflow-x: hidden ;
+    }
+    header {
+        padding: 13px 3%;
+        }
+    header.sticky {
+        padding: 7px 3%;
+    }
+    section {
+        padding: 60px 3% 50px;
+    }
+}
+
+

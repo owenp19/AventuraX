@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aventuraX</title>
+
+    <!--estilo css enlace-->
+    <link rel="stylesheet" type="text/css" href="/css/estilo.css">
+
+    <!--boxicons css enlace-->
+    <link rel="stylesheet"
+     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!--Remixicon css cdn enlance-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--google fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cambay&family=Lobster&family=Pridi:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon-->
+    <link rel="icon" href="/imgs/favicon.png">
+
+</head>
+<body>
+
+    <!--diseño sesión de encabezado-->
+    <header>
+        <a href="#" class="logo">Aventura<span>X</span></a>
+        <ul class="barra-nav">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Destinos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+
+        <div class="h-derecha">
+            <a href="#">Síguenos</a>
+            <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-twitter-x-line"></i></a>
+        
+            <!--icono menu-->
+            <div class="bx bx-menu" id="icon-menu"></div>
+        </div>
+    </header>
+
+    <!--diseño inicio de sesión-->
+    <section class="inicio">
+        <video autoplay loop class="bg-video" muted plays-inline>
+            <source src="videos/firepit.mp4" type="video/mp4">
+        </video>
+        <div class="inicio-texto">
+            <h5>Descubre</h5>
+            <h1>La Felicidad en<br>Cada Aventura</h1>
+            <p>Embárcate en travesías llenas de alegría y bienestar. <br> Explora destinos que iluminarán tu espíritu. <br> ¡Reserva tu próxima viaje con nosotros hoy!</p>
+            <a href="#" class="btn">
+                ¡Reservar Ahora!
+                <i class="ri-calendar-line"></i>
+            </a>
+        </div>
+    
+        <!-- Forma divisora en la parte inferior de la sección -->
+        <div class="forma-divisora-inferior">
+            <svg data-name="capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        
+        </div>
+    </section>
+       
+
+    <!--diseño de asisten virtual 24/7 chatbot -->
+    <div class="contenedor-chatbot">
+        <div class="boton-chatbot">
+            <!-- Imagen del chatbot en la parte inferior derecha -->
+            <img src="/imgs/Ria.png" alt="Imagen de chatbot" class="imagen-chatbot">
+            <!-- Ícono de mensaje en la parte superior izquierda de la imagen -->
+            <i class="ri-chat-3-line icono-mensaje"></i>
+        </div>
+    
+        <div class="ventana-chat">
+            <div class="cabecera-chat">
+                <h3>Hola, soy Ria 🤖. ¿Cómo puedo ayudarte a encontrar tu próximo destino de bienestar?</h3>
+                <button class="cerrar-btn">&times;</button>
+            </div>
+            <div class="cuerpo-chat">
+                <p>Hola, soy tu asistente en línea. ¿En qué puedo ayudarte?</p>
+            </div>
+            <div class="pie-chat">
+                <input type="text" placeholder="Escribe tu mensaje...">
+                <button class="enviar-btn">Enviar</button>
+            </div>
+        </div>
+    </div>
+    
+    <!--diseño de sesión de servicios-->
+    <section class="caracteristcias">
+        <div class="caracter-contenido">
+            <div class="fila">
+                <div class="fila-img">
+                    <img src="imgs/restaurantes.jpg">
+                </div>
+                <h4>Restaurantes</h4>
+            </div>
+
+            <div class="fila">
+                <div class="fila-img">
+                    <img src="imgs/spa.jpg">
+                </div>
+                <h4>Spa y Tratamientos</h4>
+            </div>
+
+            <div class="fila">
+                <div class="fila-img">
+                    <img src="imgs/alquiler-vehiculos.jpg">
+                </div>
+                <h4>Alquiler de Vehiculos</h4>
+            </div>
+
+            <div class="fila">
+                <div class="fila-img">
+                    <img src="imgs/hotel.jpg">
+                </div>
+                <h4>Hoteles</h4>
+            </div>
+        </div>
+    </section>
+
+    <!--diseño de sesión de vacaciones-->
+    <section class="vacaciones">
+        <div class="vacaciones-img">
+            <div class="carrusel">
+                <img src="/imgs/vacaciones-en-playa-y-relajacion.png">
+                <img src="/imgs/Área-de-masajes-en-entorno-tranquilo.png">
+                <img src="/imgs/escapada-de-bienestar-en-playa.png">
+            </div>
+        </div>
+    
+        <div class="vacaciones-texto">
+            <h5>Renueva tu espíritu</h5>
+            <h2>Viajes que Transforman Cuerpo y Alma</h2>
+            <p>Viaja hacia destinos que te haran sonreír. Vive momentos inolvidables de bienestar. ¿Estás listo para tu próxima aventura de felicidad?</p>
+            <a href="#" class="btn">Leer más <i class="ri-arrow-right-double-line"></i></a>
+        </div>
+    </section>
+    
+    <!--diseño de sesión de experiencias-->
+    <section class="destino">
+        <!-- Sección de destinos populares -->
+        <div class="centro-texto">
+            <h2>Destinos populares</h2>
+        </div>
+    
+        <div class="destino-contenido">
+            <div class="caja">
+                <!-- Imagen del destino -->
+                <img src="imgs/buceo.jpg">
+                <h6>Buceo</h6>
+                <h4>Santa Marta</h4>
+    
+                <!-- Sección de rating con estrellas -->
+                <div class="rating">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-line"></i>
+                </div>
+    
+                <!-- Icono de corazón clicable -->
+                <div class="icono-corazon">
+                    <i class='bx bxs-heart'></i>
+                </div>
+            </div>
+    
+            <div class="caja">
+                <img src="imgs/yoga.jpg">
+                <h6>Retiro de Yoga</h6>
+                <h4>Santa Marta</h4>
+    
+                <div class="rating">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-line"></i>
+                    <i class="ri-star-line"></i>
+                </div>
+    
+                <div class="icono-corazon">
+                    <i class='bx bxs-heart'></i>
+                </div>
+            </div>
+    
+            <div class="caja">
+                <img src="imgs/spa-urbanos.jpg">
+                <h6>Spas Urbanos</h6>
+                <h4>Medellín</h4>
+    
+                <div class="rating">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-line"></i>
+                </div>
+    
+                <div class="icono-corazon">
+                    <i class='bx bxs-heart'></i>
+                </div>
+            </div>
+        </div>
+    
+        <div class="centro-btn">
+            <a href="#" class="btn">Ver destinos <i class="ri-arrow-right-double-line"></i></a>
+        </div>
+    </section>
+
+    <!--diseño de sesión de nosotros-->
+    <section class="nosotros">
+        <div class="nosotros-texto">
+            <h5>Renueva tu espíritu</h5>
+            <h2>Viajes que Transforman Cuerpo y Alma</h2>
+            <p>Descubre playas paradisíacas y sumérgete en un mar cristalino. Vive momentos de relajación total y bienestar en destinos que te harán sonreír. ¿Estás listo para tu próxima aventura junto al mar?</p>
+            <a href="#" class="btn">Leer más <i class="ri-arrow-right-double-line"></i></a>
+        </div>
+    
+        <div class="nosotros-img">
+            <div class="carrusel-dos">
+                <img src="/imgs/Sendero-natural-con-vegetación-exuberante.png">
+                <img src="/imgs/Playa-tranquila-y-aguas-cristalinas.jpg">
+                <img src="/imgs/retiro-de-bienestar-junto-al-mar.jpg">
+            </div>
+        </div>
+    </section>
+        
+    <!--diseño de sesión de formulario aventuraX-->
+    <section class="aventurax-form"></section>
+        <div class="contacto-contenedor">
+            <div class="contacto-informacion">
+                <h2 class="contacto-titulo">Ponte en contacto con nosotros</h2>
+                <div class="ayuda">
+                    <img src="/imgs/Leo.png" class="ayuda-imagen">
+                    <div class="ayuda-detalles">
+                        <p>Hola 👋, soy Leo. Completa el formulario y te contactaré pronto. <strong>Leo García agente de aventuraX</strong>.</p>
+                    </div>
+                </div>
+                <form action="#" method="POST" class="formulario">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre aquí">
+                    
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="tucorreo@dominio.com">
+                    
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    
+                    <button type="submit" class="btn">Enviar mi mensaje <i class="ri-send-plane-fill"></i></button>
+                </form>
+            </div>
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3155.483468950739!2d-122.42304558468491!3d37.64147237978188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e80a40e69d7%3A0x64f2841f112d42d4!2sCalifornia%20Golf%20Club%20of%20San%20Francisco!5e0!3m2!1ses!2sco!4v1635094047331!5m2!1ses!2sco"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!--diseño de sesión de pie de pagina-->
+    <section class="footer">
+        <div class="custom-shape-divider-top-1726533774">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    
+        <div class="footer-caja">
+            <h3>Contacto</h3>
+            <a href="#">Dirección: Kra.13 #12-40A</a>
+            <a href="#">Teléfono: (57) + 3016048653</a>
+            <a href="#">Correo: aventruaX@gmail.com</a>
+            <a href="#">Fax: 313414515</a>
+        </div>
+    
+        <div class="footer-caja">
+            <h3>Enlaces Rápidos</h3>
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Destinos</a>
+        </div>
+    
+        <div class="footer-caja">
+            <h3>Soporte</h3>
+            <a href="#">Preguntas Frecuentes</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Términos y Condiciones</a>
+            <a href="#">Blog</a>
+        </div>
+    
+        <div class="footer-caja">
+            <h3>Redes Sociales</h3>
+            <div class="red-social">
+                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class="ri-twitter-x-line"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!--diseño de sesión de derecho de autor-->
+    <div class="copyrigth">
+        <p>&#169; <span class="desarrollador">Owenwebdesigns,</span> todos los derechos reservados 2024.</p>
+    </div>
+
+    <!--estilo javascript enlace-->
+    <script src="js/script.js"></script>
+
+    <script>
+        document.querySelectorAll('.icono-corazon i').forEach(corazon => {
+            corazon.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <!--javascript chatbot agente virtual-->
+    <script>
+        const botonChatbot = document.querySelector('.boton-chatbot');
+        const ventanaChat = document.querySelector('.ventana-chat');
+        const cerrarBtn = document.querySelector('.cerrar-btn');
+    
+        botonChatbot.addEventListener('click', () => {
+            ventanaChat.classList.toggle('abierto');
+            ventanaChat.style.display = ventanaChat.style.display === 'none' || ventanaChat.style.display === '' ? 'flex' : 'none';
+        });
+    
+        cerrarBtn.addEventListener('click', () => {
+            ventanaChat.style.display = 'none';
+        });
+    </script>
+
+    <!--javascript carrusel deslizable-->
+    <script>
+        const carrusel = document.querySelector('.carrusel');
+        const images = document.querySelectorAll('.carrusel img');
+        let index = 0;
+        const imageWidth = images[0].clientWidth; 
+    
+        // Función para mover el carrusel
+        function moveCarrusel() {
+            index++;
+            if (index >= images.length) {
+                index = 0; // Reinicia cuando llegue al final
+            }
+            carrusel.style.transform = `translateX(${-index * imageWidth}px)`; // Mueve el carrusel
+        }
+    
+        // Cambiar imagen cada 10 segundos
+        setInterval(moveCarrusel, 10000);
+    
+        // Asegurarse de que el tamaño del carrusel sea correcto al cambiar el tamaño de la ventana
+        window.addEventListener('resize', () => {
+            carrusel.style.transform = `translateX(${-index * images[0].clientWidth}px)`;
+        });
+    </script>
+</body>
+</html>
