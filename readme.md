@@ -29,4 +29,4 @@ Este proyecto es una página estática que no requiere instalación especial. Pa
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/owenp19/aventurax.git
+   git clone [https://github.com/owenp19/AventuraX.git]
